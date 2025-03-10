@@ -1,0 +1,13 @@
+{
+  "hotkeys": [
+    {
+      "primaryKey": "a",
+      "secondaryKey": "d",
+      "ctrlKey": true,
+      "altKey": true,
+      "shiftKey": false,
+      "commandId": "file-explorer:new-file",
+      "running": true
+    }
+  ]
+}

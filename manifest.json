@@ -1,0 +1,11 @@
+{
+	"id": "advanced-hotkeys",
+	"name": "Advanced Hotkeys",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "A plugin that adds advanced hotkey customization to Obsidian.",
+	"author": "Programmierwelt",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}
