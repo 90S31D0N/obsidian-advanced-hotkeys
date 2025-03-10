@@ -100,10 +100,10 @@ export class HotkeyHandler {
 
 	private executeCommand() {
 		const commandId = this.hotkey.commandId; // Beispielbefehl
-		const command = this.app.commands.commands[commandId];
+		const command = (this.app as any).commands.commands[commandId];
 
 		if (command) {
-			this.app.commands.executeCommandById(commandId);
+			(this.app as any).commands.executeCommandById(commandId);
 			new Notice(`Befehl "${command.name}" ausgeführt.`);
 		} else {
 			new Notice(`Befehl mit ID "${commandId}" nicht gefunden.`);
