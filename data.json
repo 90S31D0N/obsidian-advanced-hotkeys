@@ -2,7 +2,7 @@
   "hotkeys": [
     {
       "primaryKey": "a",
-      "secondaryKey": "d",
+      "secondaryKey": "b",
       "ctrlKey": true,
       "altKey": true,
       "shiftKey": false,

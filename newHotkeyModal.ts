@@ -70,8 +70,8 @@ export class NewHotkeyModal extends Modal {
         new Setting(contentEl)
             .setName('Command')
             .addDropdown(dropdown => {
-            const commands = this.app.commands.listCommands();
-            commands.forEach(command => {
+            const commands = (this.app as any).commands.listCommands();
+            commands.forEach((command: { id: string; name: string; }) => {
                 dropdown.addOption(command.id, command.name);
             });
             dropdown.onChange(value => {

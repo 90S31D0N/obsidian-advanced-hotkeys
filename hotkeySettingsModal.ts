@@ -1,5 +1,5 @@
 import { HotkeyHandler, HotKeyHandlerConfig } from "hotkeyHandler";
-import { App, Hotkey, Modal, Setting } from "obsidian";
+import { App, Hotkey, Modal, Setting, Command } from "obsidian";
 
 export class HotKeySettingsModal extends Modal {
     private hotkey: HotKeyHandlerConfig;
@@ -66,8 +66,8 @@ export class HotKeySettingsModal extends Modal {
         new Setting(contentEl)
             .setName('Command')
             .addDropdown(dropdown => {
-            const commands = this.app.commands.listCommands();
-            commands.forEach(command => {
+            const commands = (this.app as any).commands.listCommands();
+            commands.forEach((command: {id: string; name: string;}) => {
                 dropdown.addOption(command.id, command.name);
             });
             dropdown.setValue(this.hotkey.commandId)
